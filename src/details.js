@@ -7,9 +7,9 @@ import Reference from "./Reference";
 
 function Details() {
     const details = [
-        { id: "1", name: "sangeetha", email: "ksgeetha13@gmail.com" },
-        { id: "2", name: "kavi", email: "kkarasu14@gmail.com" },
-        { id: "3", name: "vignesh", email: "mkvicky10@gmail.com" }
+        { id: "1", name: "sangeetha", email: "ksgeetha13@gmail.com", address: "east" },
+        { id: "2", name: "kavi", email: "kkarasu14@gmail.com", address: "east" },
+        { id: "3", name: "vignesh", email: "mkvicky10@gmail.com", address: "east" }
     ]
     const navigate = useNavigate()
     function homeDetails(id) {
@@ -28,6 +28,7 @@ function Details() {
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Address</th>
                 </tr>
                 {details.map((value, key) => {
                     return (
@@ -35,6 +36,7 @@ function Details() {
                             <td><button onClick={() => homeDetails(value.id)}>{value.id}</button></td>
                             <td>{value.name}</td>
                             <td>{value.email}</td>
+                            <td>{value.address}</td>
                         </tr>
                     )
                 })}
